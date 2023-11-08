@@ -1,6 +1,7 @@
 describe('template spec', () => {
   it('passes', () => {
-    cy.visit('https://xamplifyservicesptyltddemo4.service-now.com/sp')
+    const url = Cypress.env('baseUrl')
+    cy.visit(url)
     const user = Cypress.env('user')
     const password = Cypress.env('password')
     cy.get('#username').type(user)
